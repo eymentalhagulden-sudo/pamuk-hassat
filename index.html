@@ -4,12 +4,13 @@
   <title>Pamuk Hasat Merkezi</title>
   <style>
     body {
-      background: url('https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1570549717069-33bede3c2d4e') no-repeat center center fixed;
       background-size: cover;
       color: white;
       font-family: Arial;
       text-align: center;
       padding-top: 150px;
+      position: relative;
     }
     h1 {
       text-shadow: 0 0 10px black;
@@ -22,15 +23,31 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%);
     }
     button:hover {
       background: #006400;
+    }
+    .info-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      font-size: 14px;
+      background: #006400;
+      color: white;
+      border: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
   <h1>Pamuk Hasat Merkezi</h1>
   <button onclick="leoKonuş()">Leo'dan Bildirim</button>
+  <button class="info-btn" onclick="bilgi()">Pamuk Bilgisi</button>
 
   <script>
     function leoKonuş() {
@@ -39,6 +56,10 @@
       ses.lang = "tr-TR";
       ses.rate = 0.95;
       speechSynthesis.speak(ses);
+    }
+
+    function bilgi() {
+      alert("Pamuk, Şanlıurfa’da Temmuz-Eylül arası olgunlaşır. Beyaz, yumuşacık, pamuk gibi. Hasat zamanı geldiğinde, Leo seni uyarır.");
     }
   </script>
 </body>
