@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pamuk Hasat Merkezi</title>
+  <style>
+    body {
+      background: url('https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 150px;
+    }
+    h1 {
+      text-shadow: 0 0 10px black;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #228B22;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #006400;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pamuk Hasat Merkezi</h1>
+  <button onclick="leoKonuş()">Leo'dan Bildirim</button>
+
+  <script>
+    function leoKonuş() {
+      let mesaj = "Pamuk olgunlaştı. Üç gün içinde hasat yapın.";
+      let ses = new SpeechSynthesisUtterance(mesaj);
+      ses.lang = "tr-TR";
+      ses.rate = 0.95;
+      speechSynthesis.speak(ses);
+    }
+  </script>
+</body>
+</html>
